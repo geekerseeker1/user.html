@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Details</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>User Details</h1>
+  <div id="userDetailsContainer">
+    <div id="profilePictureContainer"></div>
+    <div id="userDetails"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Get user details from localStorage
+    var userDetails = JSON.parse(localStorage.getItem("userDetails"));
+
+    // Display user details
+    if (userDetails) {
+      document.getElementById("profilePictureContainer").innerHTML = '<img src="' + userDetails.profilepicture + '" alt="Profile Picture">';
+      document.getElementById("
